@@ -13,7 +13,8 @@ post '/gateway' do
       # return if params[:token] != ENV['SLACK_TOKEN']
       resp = HTTParty.get(repo_url)
       resp = JSON.parse resp.body
-      respond_message "There are #{resp['open_issues_count']} open issues on #{repo}"
+      # respond_message "There are #{resp['open_issues_count']} open issues on #{repo}"
+      respond_message "#{resp.body} on #{repo}"
   end
 end
 
