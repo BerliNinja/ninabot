@@ -1,2 +1,2 @@
-require './ninabot'
+require './bot'
 run Sinatra::Application
