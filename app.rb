@@ -16,7 +16,7 @@ post '/gateway' do
       respond_message "There are #{resp['open_issues_count']} open issues on #{repo}"
     when 'friends'
       repo = JSON.parse resp.body
-      respond_message "#{resp} is my friend"
+      respond_message "#{repo} is my friend"
   end
 end
 
