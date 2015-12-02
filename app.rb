@@ -22,7 +22,7 @@ post '/gateway' do
 end
 
 get '/' do
-  hi
+  "hi"
 end
 
 def respond_message message
