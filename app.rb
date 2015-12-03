@@ -16,11 +16,8 @@ post '/gateway' do
       respond_message "There are #{resp['open_issues_count']} open issues on #{repo}"
     when 'friends'
       respond_message "Hey my friend"
-    when 'kneipenquiz'
-      repo = '_ neumanrq/kneipenquiz'
-      resp = HTTParty.get(repo_url)
-      resp = JSON.parse resp.body
-      respond_message "There are #{resp['open_issues_count']} open issues on #{repo}"
+    when 'cat'
+      respond_message "http://giphy.com/gifs/cat-maru-kIkwipWRoqeUE"
   end
 end
 
