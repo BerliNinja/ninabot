@@ -17,7 +17,8 @@ post '/gateway' do
     when 'friends'
       respond_message "Hey my friend"
     when 'cat'
-      respond_message "http://giphy.com/gifs/cat-maru-kIkwipWRoqeUE"
+      catArray = ["http://giphy.com/gifs/cat-maru-kIkwipWRoqeUE", "http://www.netanimations.net/catside-story-2.GIF", "http://www.lolbing.com/wp-content/uploads/2012/02/70dfflip-that-cat.jpg" ]
+      respond_message = catArray.sample
   end
 end
 
