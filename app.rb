@@ -19,7 +19,7 @@ post '/gateway' do
     when 'cat'
       catArray = ["http://giphy.com/gifs/cat-maru-kIkwipWRoqeUE", "http://www.netanimations.net/catside-story-2.GIF", "http://www.lolbing.com/wp-content/uploads/2012/02/70dfflip-that-cat.jpg" ]
       test = catArray.sample
-      respond_message = test
+      respond_message = test.to_s
   end
 end
 
