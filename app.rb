@@ -13,7 +13,11 @@ post '/gateway' do
       # return if params[:token] != ENV['SLACK_TOKEN']
       resp = HTTParty.get(repo_url)
       resp = JSON.parse resp.body
-      respond_message "There are #{resp['open_issues_count']} open issues on #{repo}"
+      if resp['open_issues_count'] > 6
+        respond_message "There are #{resp['open_issues_count']} open issues on #{repo}. Please work on it! That's way too much"
+      else
+        respond_message "There are #{resp['open_issues_count']} open issues on #{repo}. Awesome that is totally manageable"
+      end
     when 'friends'
       respond_message "Hey my friend"
     when 'cat'
